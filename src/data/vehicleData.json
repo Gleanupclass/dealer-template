@@ -1,0 +1,125 @@
+{
+    "vehicles": [
+      {
+        "id": "1",
+        "year": 2022,
+        "make": "Honda",
+        "model": "Civic",
+        "trim": "Touring CVT",
+        "price": 32499,
+        "mileage": 15000,
+        "image": "https://www.providencejournal.com/gcdn/presto/2021/09/09/NPRJ/009fcede-9e78-408e-8caf-a8b3747ce2c8-01touring.jpg?crop=2399,1349,x1,y210&width=2399&height=1349&format=pjpg&auto=webp",
+        "specs": {
+          "transmission": "Automatic",
+          "drivetrain": "FWD",
+          "fuelType": "Gasoline",
+          "bodyStyle": "Sedan"
+        },
+        "carfaxAvailable": true
+      },
+      {
+        "id": "2",
+        "year": 2021,
+        "make": "Toyota",
+        "model": "Camry",
+        "trim": "XSE",
+        "price": 34999,
+        "mileage": 20000,
+        "image": "https://www.motortrend.com/uploads/sites/5/2020/12/2021-Toyota-Camry-Hybrid-XSE-28.jpg?w=768&width=768&q=75&format=webp",
+        "specs": {
+          "transmission": "Automatic",
+          "drivetrain": "FWD",
+          "fuelType": "Gasoline",
+          "bodyStyle": "Sedan"
+        },
+        "carfaxAvailable": true
+      },
+      {
+        "id": "3",
+        "year": 2023,
+        "make": "BMW",
+        "model": "4 Series",
+        "trim": "430i",
+        "price": 52999,
+        "mileage": 5000,
+        "image": "https://vehicle-images.dealerinspire.com/75a7-11002549/thumbnails/large/WBA73AP01PCM60890/6c336b9d5023b1a54577c14c3e6ff3e4.jpg",
+        "specs": {
+          "transmission": "Automatic",
+          "drivetrain": "RWD",
+          "fuelType": "Gasoline",
+          "bodyStyle": "Coupe"
+        },
+        "carfaxAvailable": true
+      },
+      {
+        "id": "4",
+        "year": 2022,
+        "make": "Mazda",
+        "model": "MX-5 Miata",
+        "trim": "Grand Touring",
+        "price": 35999,
+        "mileage": 8000,
+        "image": "https://media.ed.edmunds-media.com/mazda/mx-5-miata/2022/oem/2022_mazda_mx-5-miata_convertible_club_fq_oem_1_600.jpg",
+        "specs": {
+          "transmission": "Manual",
+          "drivetrain": "RWD",
+          "fuelType": "Gasoline",
+          "bodyStyle": "Convertible"
+        },
+        "carfaxAvailable": false
+      },
+      {
+        "id": "5",
+        "year": 2021,
+        "make": "Toyota",
+        "model": "RAV4",
+        "trim": "XLE Premium",
+        "price": 36999,
+        "mileage": 25000,
+        "image": "https://vehicle-images.dealerinspire.com/fc34-18003200/2T3A1RFV2MC196003/e7f497f8183227061cf3181d407a6ad8.jpg",
+        "specs": {
+          "transmission": "Automatic",
+          "drivetrain": "AWD",
+          "fuelType": "Gasoline",
+          "bodyStyle": "SUV"
+        },
+        "carfaxAvailable": true
+      },
+      {
+        "id": "6",
+        "year": 2022,
+        "make": "Honda",
+        "model": "Odyssey",
+        "trim": "EX-L",
+        "price": 41999,
+        "mileage": 18000,
+        "image": "https://hips.hearstapps.com/hmg-prod/images/2022-honda-odyssey-mmp-1-1610751865.jpg?crop=1.00xw:0.846xh;0,0.154xh&resize=1200:*",
+        "specs": {
+          "transmission": "Automatic",
+          "drivetrain": "FWD",
+          "fuelType": "Gasoline",
+          "bodyStyle": "Minivan"
+        },
+        "carfaxAvailable": true
+      },
+      {
+        "id": "7",
+        "year": 2023,
+        "make": "Ford",
+        "model": "F-150",
+        "trim": "XLT",
+        "price": 48999,
+        "mileage": 10000,
+        "image": "https://hips.hearstapps.com/hmg-prod/images/2023-f-150-rattler-01-1648495659.jpg?crop=0.708xw:0.472xh;0.159xw,0.274xh&resize=1200:*",
+        "specs": {
+          "transmission": "Automatic",
+          "drivetrain": "4WD",
+          "fuelType": "Gasoline",
+          "bodyStyle": "Truck"
+        },
+        "carfaxAvailable": true
+      }
+    ]
+  }
+  
+  

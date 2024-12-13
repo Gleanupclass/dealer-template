@@ -82,7 +82,7 @@ const AboutUs = () => {
             <h2 className="text-xl font-bold mb-4">Contact Us</h2>
             <div className="space-y-2 text-gray-300">
               <p>F-4450 Ontario St, Beamsville ON L3J0A4</p>
-              <p>Phone: (123) 456-7890</p>
+              <p>Phone: 4165574537</p>
               <p>Email: info@motorsuperkings.com</p>
             </div>
           </div>

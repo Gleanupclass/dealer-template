@@ -7,6 +7,7 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import './Header.css'; // Import custom styles
 
+import siteLogo from '../../assets/site-logo.jpg' 
 const Header = () => {
   const items = [
     {
@@ -53,7 +54,11 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center gap-3">
-          <h1 className="font-bold text-xl text-white">Brand Name</h1>
+          <Link to="/" className="flex items-center">
+            <img src={
+              siteLogo
+            } alt="Motor Superkings" className="h-12 w-auto" />
+          </Link>
         </div>
 
         {/* Centered Menu Items */}
@@ -74,3 +79,4 @@ const Header = () => {
 };
 
 export default Header;
+

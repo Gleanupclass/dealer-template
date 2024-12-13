@@ -8,8 +8,10 @@ import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 import VehicleDepartments from './components/VehicleDepartment';
 import Header from './components/header/Header';
-import AboutUs from './components/AboutUs'; // Import About Us component
+import AboutUs from './components/AboutUs';
 import BodystyleComponent from './components/BodystyleComponent';
+import VehicleListing from './components/CarListing';
+import PreOwnedInventory from './components/PreOwnedInventory';
 
 function App() {
   return (
@@ -26,13 +28,15 @@ function App() {
                   <CarSearch />
                   <VehicleFeatures />
                   <VehicleDepartments />
-                  <BodystyleComponent/>
+                  <BodystyleComponent />
                   <Testimonials />
                   <Newsletter />
                 </>
               }
             />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/cars" element={<PreOwnedInventory />} />
+            <Route path="/:vehicleType" element={<VehicleListing />} />
           </Routes>
         </main>
         <Footer />
@@ -42,3 +46,4 @@ function App() {
 }
 
 export default App;
+
