@@ -7,7 +7,7 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import './Header.css'; // Import custom styles
 
-import siteLogo from '../../assets/site-logo.jpg' 
+import siteLogo from '../../assets/logo.png' 
 const Header = () => {
   const items = [
     {
@@ -57,7 +57,7 @@ const Header = () => {
           <Link to="/" className="flex items-center">
             <img src={
               siteLogo
-            } alt="Motor Superkings" className="h-12 w-auto" />
+            } alt="Motor Superkings" className="h-20 w-auto" />
           </Link>
         </div>
 
