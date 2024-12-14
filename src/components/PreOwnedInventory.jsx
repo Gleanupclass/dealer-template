@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaCar, FaTachometerAlt, FaGasPump, FaCog } from 'react-icons/fa';
 import vehiclesData from '../data/vehicleData.json';
+import { resolveImagePath } from '../utils/utils';
 
 const PreOwnedInventory = () => {
   const [vehicles, setVehicles] = useState(vehiclesData.vehicles);
@@ -37,6 +38,8 @@ const PreOwnedInventory = () => {
     applyFilters();
   }, [filterInput]);
 
+  
+
   return (
     <div className="min-h-screen bg-black">
       <div className="border-b border-gray-800">
@@ -70,7 +73,7 @@ const PreOwnedInventory = () => {
               <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
                 <div className="md:col-span-4 relative h-64 md:h-full min-h-[250px]">
                   <img
-                    src={vehicle.image}
+                    src={resolveImagePath(vehicle.image)}
                     alt={`${vehicle.year} ${vehicle.make} ${vehicle.model}`}
                     className="w-full h-full object-cover"
                   />
