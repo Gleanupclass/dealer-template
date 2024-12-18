@@ -1,14 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Menubar } from 'primereact/menubar';
 import { Button } from 'primereact/button';
 import { Link } from 'react-router-dom';
+import { Dialog } from 'primereact/dialog';
+import { Password } from 'primereact/password';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import './Header.css'; // Import custom styles
 
 import siteLogo from '../../assets/logo.png' 
+import { useAuth } from '../../context/AuthContext';
+import { InputText } from 'primereact/inputtext';
 const Header = () => {
+  const { isLoggedIn, login, logout } = useAuth();
+  const [showLoginDialog, setShowLoginDialog] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    if (login(username, password)) {
+      setShowLoginDialog(false);
+      setUsername('');
+      setPassword('');
+    } else {
+      alert('Invalid credentials');
+    }
+  };
   const items = [
     {
       label: 'HOME',
@@ -44,10 +62,14 @@ const Header = () => {
 
   const end = (
     <div className="flex items-center gap-3">
-      <Button label="Sign Up" className="p-button-text custom-button text-white" />
+      {isLoggedIn ? (
+        <Button label="Logout" icon="pi pi-sign-out" className="p-button-text custom-button text-white" onClick={logout} />
+      ) : (
+        <Button label="Login" icon="pi pi-sign-in" className="p-button-text custom-button text-white" onClick={() => setShowLoginDialog(true)} />
+      )}
       <Button icon="pi pi-question-circle" className="p-button-text custom-button" />
     </div>
-  );
+  )
 
   return (
     <header className="custom-header bg-gray-900 p-4 shadow-lg">
@@ -73,6 +95,14 @@ const Header = () => {
         <div className="flex items-center gap-3">
           {end}
         </div>
+
+      <Dialog header="Login" visible={showLoginDialog} onHide={() => setShowLoginDialog(false)} className="w-[300px]">
+        <div className="flex flex-col gap-4">
+          <InputText value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
+          <Password value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" feedback={false} />
+          <Button label="Login" onClick={handleLogin} />
+        </div>
+      </Dialog>
       </div>
     </header>
   );

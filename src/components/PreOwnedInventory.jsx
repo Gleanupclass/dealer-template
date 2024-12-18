@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { FaCar, FaTachometerAlt, FaGasPump, FaCog } from 'react-icons/fa';
 import vehiclesData from '../data/vehicleData.json';
 import { resolveImagePath } from '../utils/utils';
+import { VehicleContext } from '../context/VehicleContext';
 
 const PreOwnedInventory = () => {
-  const [vehicles, setVehicles] = useState(vehiclesData.vehicles);
+    const { vehicles } = useContext(VehicleContext);
   const [filteredVehicles, setFilteredVehicles] = useState(vehicles);
   const [filterInput, setFilterInput] = useState('');
 

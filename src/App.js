@@ -12,9 +12,13 @@ import AboutUs from './components/AboutUs';
 import BodystyleComponent from './components/BodystyleComponent';
 import VehicleListing from './components/CarListing';
 import PreOwnedInventory from './components/PreOwnedInventory';
+import { VehicleProvider } from './context/VehicleContext';
+import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
+    <AuthProvider>
+    <VehicleProvider>
     <Router>
       <div className="font-sans antialiased text-gray-900">
         <Header />
@@ -42,6 +46,8 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </VehicleProvider>
+    </AuthProvider>
   );
 }
 
